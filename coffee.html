@@ -55,8 +55,10 @@
     // $("img#coffee-image").attr("src", "static/coffee_beans.jpg");
     $("img#coffee-image").attr("src","static/coffee_beans.jpg");
 
+    const drinksOrdered = [];
+    function makeCoffee(drinkType){
+        
 
-    function makeCoffee(){
       console.log("changing image from beans to machine")
       $("img#coffee-image").attr('src', "static/coffee_machine.jpg");
 
@@ -71,7 +73,10 @@
         }, 3000);
 
     }
-    $("img#coffee-image").on("click",makeCoffee)
+    $("img#coffee-image").on("click",function () {makeCoffee("brew")
+                                        drinksOrdered.push("brew");
+                                        console.log(drinksOrdered);
+            });
 
     // coffeeImage.addEventListener('click', makeCoffee);
     // use this JavaScript object in further study step
